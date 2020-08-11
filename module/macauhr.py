@@ -4,7 +4,7 @@ import time,sys
 
 begin_date = datetime.today() - timedelta(days=30)
 begin_date = begin_date.date()
-print("Set Begin Date : %s " % begin_date)
+#print("Set Begin Date : %s " % begin_date)
 
 def Run(Hide = False):
     print('[MacauHR]',end='')
@@ -49,7 +49,11 @@ def Run(Hide = False):
             tagg = driver.find_elements_by_xpath('//*[@class="job-tag-table"]//td')
             tagg_contact = ""
             for z in tagg:
-                tagg_contact += z.text.strip() + '\n'
+                m = z.text.strip()
+                if m.find(':') ==-1:
+                    m = m + '\r\n'
+                tagg_contact += m
+                
             tagg_contact += driver.find_element_by_xpath('//*[@class="group-job-description"]').text
             return tagg_contact
         except :
@@ -57,23 +61,19 @@ def Run(Hide = False):
 
 
     # Date Save
-    files = open('mane.txt','a+')
-    files.writelines('\n')
-    files.writelines("#"*18 + " @Mane " + "#"*19+ '\n')
-    files.writelines("              澳門首選搵工網站"+ '\n')
-    files.writelines("#"*44+ '\n')
-    files.writelines('\n')
+    files = open('mane.md','a+')
+    files.writelines("## 澳門首選搵工網站"+ '\r\n')
 
     for title,types,comm,date,url in fetch_contact:
         if (date<begin_date):
             continue
-        files.writelines("=============== ["+str(date) + "] ==============="+ '\n')
-        files.writelines(title + '\n')
-        files.writelines(types + '\n')
-        files.writelines(comm + '\n')
-        files.writelines(fetch_url_contact(url) + '\n')
-        files.writelines("-"*44+ '\n')
-        files.writelines(url + '\n')
+        files.writelines("### "+str(date) + "  [OPEN SOURCE LINK]("+url+")"+ '\r\n')
+        files.writelines('```mane'+ '\r\n')
+        files.writelines(title + '\r\n')
+        files.writelines(types + '\r\n')
+        files.writelines(comm + '\r\n')
+        files.writelines(fetch_url_contact(url) + '\r\n')
+        files.writelines('```'+ '\r\n')
         print('.',end='')
         sys.stdout.flush()
     print()

@@ -47,21 +47,18 @@ def Run(Hide = False):
         return driver.find_element_by_class_name("pdl_context").text
 
     # Date Save
-    files = open('mane.txt','a+')
-    files.writelines('\n')
-    files.writelines("#"*18 + " @Mane " + "#"*19+ '\n')
-    files.writelines("  隨心搵好工 – WeCare Happy Jobs隨心好工  "+ '\n')
-    files.writelines("#"*44+ '\n')
-    files.writelines('\n')
+    files = open('mane.md','a+')
+    files.writelines("## 隨心搵好工 – WeCare Happy Jobs隨心好工  "+ '\r\n')
     for times,title,com,types,url in return_contact:
         if (times < begin_date):
             continue
-        files.writelines("=============== ["+str(times) + "] ==============="+ '\n')
-        files.writelines(title + '\n')
-        files.writelines(com + '\n')
-        files.writelines(types + '\n' + Fetch_all_contact(url) + '\n')
-        files.writelines("-"*44+ '\n')
-        files.writelines(url + '\n')
+        files.writelines("### "+str(times) + "  [OPEN SOURCE LINK]("+url+")"+ '\r\n')
+        files.writelines('```mane'+ '\r\n')
+        files.writelines(title + '\r\n')
+        files.writelines(com + '\r\n')
+        files.writelines(types + '\r\n' + Fetch_all_contact(url) + '\r\n')
+        files.writelines('```'+ '\r\n')
+
     files.close()
     driver.quit()
     print('')

@@ -52,23 +52,20 @@ def run(Hide = False):
     comb = []
     for x in poster:
         comb.append(Get_Times_contact(x))
-
+        
     # Date Save
-    files = open('mane.txt','a+')
-    files.writelines("#"*18 + " @Mane " + "#"*19+ '\n')
-    files.writelines("澳門兼職情報站 Macau Part-Time Jobs Station"+ '\n')
-    files.writelines("#"*44+ '\n')
-    files.writelines('\n')
-
+    files = open('mane.md','a+')
+    files.writelines("## 澳門兼職情報站 Macau Part-Time Jobs Station"+ '\r\n')
     for x,y,z in comb:
         if (x<begin_date):
             continue
-        files.writelines("=============== ["+str(x) + "] ==============="+ '\n')
-        files.writelines(y + '\n')
-        files.writelines("-"*44+ '\n')
-        files.writelines(z + '\n')
+        files.writelines("### "+str(x) + "  [OPEN SOURCE LINK]("+z+")"+ '\r\n')
+        files.writelines('```mane'+ '\r\n')
+        files.writelines(y + '\r\n')
+        files.writelines('```'+ '\r\n')
     files.close()
     driver.quit()
+
 
 def TimeTitle_Date(fb_date):
     dd = fb_date
@@ -119,18 +116,14 @@ def run_vister(Hide=False):
         comb.append(Get_Times_contact_Link_from_vister(x))
 
     # Date Save
-    files = open('mane.txt','a+')
-    files.writelines('\n')
-    files.writelines("#"*18 + " @Mane " + "#"*19+ '\n')
-    files.writelines("澳門兼職情報站 Macau Part-Time Jobs Station Visitor Posts"+ '\n')
-    files.writelines("#"*44+ '\n')
-    files.writelines('\n')
+    files = open('mane.md','a+')
+    files.writelines("## 澳門兼職情報站 Macau Part-Time Jobs Station Visitor Posts"+ '\r\n')
     for x,y,z in comb:
         if (x<begin_date):
             continue
-        files.writelines("=============== ["+str(x) + "] ==============="+ '\n')
-        files.writelines(y + '\n')
-        files.writelines("-"*44+ '\n')
-        files.writelines(z + '\n')
+        files.writelines("### "+str(x) + "  [OPEN SOURCE LINK]("+z+")"+ '\r\n')
+        files.writelines('```mane'+ '\r\n')
+        files.writelines(y + '\r\n')
+        files.writelines('```'+ '\r\n')
     files.close()
     driver.quit()

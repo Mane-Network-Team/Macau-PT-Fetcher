@@ -6,6 +6,13 @@
 - Install Selenium Environment
 - Install Google Chrome
 - Install Webdriver for Google Chrome
+- Install npm
+- Install [markdown-styles](https://github.com/mixu/markdown-styles)
+
+```bash
+sudo apt install npm
+sudo npm install -g markdown-styles
+```
 
 ## Usage
 
@@ -13,7 +20,7 @@
 python3 main.py
 ```
 
-A file is generated call *mane.txt* after it finish
+A file is generated call *output.pdf* after it finish
 
 ## Module
 
@@ -29,6 +36,18 @@ A file is generated call *mane.txt* after it finish
 - Some module do not support background running, so they require Linux with a graphical desktop.
 
 ## History
+
+**V1.0.3 Alpha**
+
+- Support output pdf using google chrome command line
+- Change output Readme file and convert to html
+- Patch html for word wrap
+- Fix terminal message
+- Fix word wrap in macauhr module
+
+**v1.0.2 Alpha**
+
+- Fix header text and replace \n to \r\n
 
 **v1.0.1 Alpha**
 

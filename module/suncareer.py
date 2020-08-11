@@ -4,7 +4,7 @@ import time,sys
 
 begin_date = datetime.today() - timedelta(days=30)
 begin_date = begin_date.date()
-print("Set Begin Date : %s " % begin_date)
+#print("Set Begin Date : %s " % begin_date)
 
 def Run(Hide = False):
     print('[SunCareer]',end='')
@@ -43,22 +43,19 @@ def Run(Hide = False):
     fetch_cont = [get_contact(x) for x in lists]
 
     # Date Save
-    files = open('mane.txt','a+')
-    files.writelines('\n')
-    files.writelines("#"*18 + " @Mane " + "#"*19+ '\n')
-    files.writelines("                 澳門筍工網"+ '\n')
-    files.writelines("#"*44+ '\n')
-    files.writelines('\n')
+    files = open('mane.md','a+')
+    files.writelines("## 澳門筍工網"+ '\r\n')
 
     for title,comm,area,menory,types,date,url in fetch_cont:
         if (date<begin_date):
             continue
-        files.writelines("=============== ["+str(date) + "] ==============="+ '\n')
-        files.writelines(title + '\n')
-        files.writelines(comm + '\n')
-        files.writelines(get_inside_contact(url) + '\n')
-        files.writelines("-"*44+ '\n')
-        files.writelines(url + '\n')
+        files.writelines("### "+str(date) + "  [OPEN SOURCE LINK]("+url+")"+ '\r\n')
+        files.writelines('```mane'+ '\r\n')
+        files.writelines(title + '\r\n')
+        files.writelines(comm + '\r\n')
+        files.writelines(get_inside_contact(url) + '\r\n')
+        files.writelines('```'+ '\r\n')
+
         print('.',end='')
         sys.stdout.flush()
     print()

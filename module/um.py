@@ -24,7 +24,7 @@ def run(Hide = False):
         all_td = driver.find_elements_by_xpath('//*[@id="main_table"]/tbody//td')
         all_text = ""   
         for y in all_td:
-            all_text += y.text.strip() + '\n'
+            all_text += y.text.strip() + '\r\n'
         return [url,all_text]
     
     save_list = []
@@ -35,16 +35,14 @@ def run(Hide = False):
     print('')
     
     # Date Save
-    files = open('mane.txt','a+')
-    files.writelines('\n')
-    files.writelines("#"*18 + " @Mane " + "#"*19+ '\n')
-    files.writelines("             澳门大学 職位空缺"+ '\n')
-    files.writelines("#"*44+ '\n')
-    files.writelines('\n')
+    files = open('mane.md','a+')
+    files.writelines('\r\n')
+    files.writelines("## 澳门大学 職位空缺"+ '\r\n')
+    files.writelines('\r\n')
     for x,y in save_list:
-        files.writelines("="*44+ '\n')
-        files.writelines(y + '\n')
-        files.writelines("-"*44+ '\n')
-        files.writelines(x + '\n')
+        files.writelines("### 正在招聘  [OPEN SOURCE LINK]("+x+")"+ '\r\n')
+        files.writelines('```mane'+ '\r\n')
+        files.writelines(y + '\r\n')
+        files.writelines('```'+ '\r\n')
     files.close()
     driver.quit()
