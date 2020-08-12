@@ -1,5 +1,6 @@
 from selenium import webdriver
 from datetime import datetime, timedelta
+from urllib.parse import quote
 import time,sys
 
 begin_date = datetime.today() - timedelta(days=30)
@@ -49,7 +50,8 @@ def Run(Hide = False):
     for title,comm,area,menory,types,date,url in fetch_cont:
         if (date<begin_date):
             continue
-        files.writelines("### "+str(date) + "  [OPEN SOURCE LINK]("+url+")"+ '\r\n')
+        save_url = "https://manesec.com/jump.php?j=" + quote(str(url),safe='')
+        files.writelines("### "+str(date) + "  [OPEN SOURCE LINK]("+save_url+")"+ '\r\n')
         files.writelines('```mane'+ '\r\n')
         files.writelines(title + '\r\n')
         files.writelines(comm + '\r\n')

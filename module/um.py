@@ -1,5 +1,6 @@
 from selenium import webdriver
 from datetime import datetime, timedelta
+from urllib.parse import quote
 import time,sys
 
 def run(Hide = False):
@@ -40,6 +41,7 @@ def run(Hide = False):
     files.writelines("## 澳门大学 職位空缺"+ '\r\n')
     files.writelines('\r\n')
     for x,y in save_list:
+        x = "https://manesec.com/jump.php?j=" + quote(str(x),safe='')
         files.writelines("### 正在招聘  [OPEN SOURCE LINK]("+x+")"+ '\r\n')
         files.writelines('```mane'+ '\r\n')
         files.writelines(y + '\r\n')

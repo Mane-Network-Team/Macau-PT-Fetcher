@@ -37,17 +37,22 @@ A file is generated call *output.pdf* after it finish
 
 ## History
 
+**V1.0.4 Alpha**
+
+- Insert Statistical code, goto manesec server and jump.
+- Remove URL and Program Version.
+
 **V1.0.3 Alpha**
 
-- Support output pdf using google chrome command line
-- Change output Readme file and convert to html
-- Patch html for word wrap
-- Fix terminal message
-- Fix word wrap in macauhr module
+- Support output pdf using google chrome command line.
+- Change output Readme file and convert to html.
+- Patch html for word wrap.
+- Fix terminal message.
+- Fix word wrap in macauhr module.
 
 **v1.0.2 Alpha**
 
-- Fix header text and replace \n to \r\n
+- Fix header text and replace \n to \r\n.
 
 **v1.0.1 Alpha**
 

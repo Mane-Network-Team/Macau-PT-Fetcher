@@ -4,6 +4,7 @@
 
 from selenium import webdriver
 from datetime import datetime, timedelta
+from urllib.parse import quote
 import time
 
 begin_date = datetime.today() - timedelta(days=30)
@@ -59,6 +60,7 @@ def run(Hide = False):
     for x,y,z in comb:
         if (x<begin_date):
             continue
+        z = "https://manesec.com/jump.php?j=" + quote(str(z),safe='')
         files.writelines("### "+str(x) + "  [OPEN SOURCE LINK]("+z+")"+ '\r\n')
         files.writelines('```mane'+ '\r\n')
         files.writelines(y + '\r\n')
@@ -121,6 +123,7 @@ def run_vister(Hide=False):
     for x,y,z in comb:
         if (x<begin_date):
             continue
+        z = "https://manesec.com/jump.php?j=" + quote(str(z),safe='')
         files.writelines("### "+str(x) + "  [OPEN SOURCE LINK]("+z+")"+ '\r\n')
         files.writelines('```mane'+ '\r\n')
         files.writelines(y + '\r\n')
