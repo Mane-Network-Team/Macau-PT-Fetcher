@@ -29,13 +29,21 @@ A file is generated call *output.pdf* after it finish
 - macauhr.py : 澳門筍工網
 - suncareer.py : 澳門首選搵工網站
 - um.py : 澳门大学 職位空缺
-- N_fastfindjob.py : In preparation may possible to give up.
+- cenjobs.py : No.1 澳門招聘指南 CENJOBS.COM
+- fastfindjob.py : 快搵工 Fast Find Job - 澳門菁英求職第一選擇
+- mustedu.py : 澳门科技大学 職位空缺
 
 ## Issue
 
 - Some module do not support background running, so they require Linux with a graphical desktop.
 
 ## History
+
+**V1.0.5 Alpha**
+
+- Add cenjobs module
+- Add fastfindjob module
+- Add mustedu module
 
 **V1.0.4 Alpha**
 

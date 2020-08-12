@@ -35,6 +35,14 @@ if True :
     facebook_mptjs.run_vister(False)
 
 if True:
+    import module.cenjobs as cenjobs
+    cenjobs.Run(True)
+
+if True:
+    import module.fastfindjob as fastfindjob
+    fastfindjob.Run(True)
+
+if True:
     import module.hellojob as hellojob
     hellojob.Run(False)
 
@@ -49,6 +57,10 @@ if True:
 if True:
     import module.um as um
     um.run(True)
+
+if True:
+    import module.mustedu as mustedu
+    mustedu.Run(True)
 
 # Output html
 if os.path.exists('out'):

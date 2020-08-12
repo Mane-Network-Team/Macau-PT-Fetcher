@@ -78,6 +78,7 @@ def Run(Hide = False):
         files.writelines('```'+ '\r\n')
         print('.',end='')
         sys.stdout.flush()
+        
     print()
     files.close()
     driver.quit()

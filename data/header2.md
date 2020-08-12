@@ -14,8 +14,11 @@
 可以搜索相应的标题进行跳转，更多的来源待开发。
 - 澳門兼職情報站 Macau Part-Time Jobs Station
 - 澳門兼職情報站 Macau Part-Time Jobs Station Visitor Posts
-- 隨心搵好工-–-wecare-happy-jobs隨心好工
+- No.1 澳門招聘指南 CENJOBS.COM
+- 快搵工 Fast Find Job - 澳門菁英求職第一選擇
+- 隨心搵好工 wecare-happy-jobs隨心好工
 - 澳門首選搵工網站
 - 澳門筍工網
 - 澳门大学-職位空缺
+- 澳门科技大学 職位空缺
 
