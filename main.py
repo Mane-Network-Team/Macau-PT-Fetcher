@@ -72,4 +72,4 @@ import patch_html as patch
 patch.run_path()
 
 # google to pdf
-os.system("google-chrome --headless --print-to-pdf=output.pdf --no-margins --print-to-pdf-no-header out/mane_patch.html")
+os.system("google-chrome --headless --print-to-pdf="+str(datetime.date.today())+".pdf --no-margins --print-to-pdf-no-header out/mane_patch.html")

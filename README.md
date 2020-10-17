@@ -44,6 +44,7 @@ A file is generated call *output.pdf* after it finish
 - Add cenjobs module
 - Add fastfindjob module
 - Add mustedu module
+- Add date
 
 **V1.0.4 Alpha**
 
