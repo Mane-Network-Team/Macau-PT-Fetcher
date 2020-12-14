@@ -92,6 +92,12 @@ def run_vister(Hide=False):
 
     driver = webdriver.Chrome(options=chrome_options)
     driver.get("https://www.facebook.com/pg/MacauPartTimeJobsStation/posts/?ref=page_internal")
+    time.sleep(2)
+    try:
+
+        driver.execute_script('document.getElementsByClassName("uiLayer")[0].remove()')
+    except:
+        pass
     time.sleep(1)
     driver.find_element_by_xpath('/html/body/div[1]/div[3]/div[1]/div/div/div[2]/div[2]/div/div[3]/div[1]/div/div/div[1]/div/div[2]/div/div/div[1]/a').click()
     time.sleep(5)

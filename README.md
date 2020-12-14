@@ -32,12 +32,19 @@ A file is generated call *output.pdf* after it finish
 - cenjobs.py : No.1 澳門招聘指南 CENJOBS.COM
 - fastfindjob.py : 快搵工 Fast Find Job - 澳門菁英求職第一選擇
 - mustedu.py : 澳门科技大学 職位空缺
+- job853.py : 澳門人才網 job853.com
+- jobscallme.py : 澳門好工作 - 澳門最高瀏覽量的綜合招聘網站
 
 ## Issue
 
 - Some module do not support background running, so they require Linux with a graphical desktop.
 
 ## History
+
+**V1.0.6 Alpha**
+
++ Add job853module
++ Add jobscallme module
 
 **V1.0.5 Alpha**
 
