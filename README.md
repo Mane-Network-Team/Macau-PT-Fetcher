@@ -1,4 +1,5 @@
 # Mane-Macau-PT-Fetcher
+![visitors](https://visitor-badge.glitch.me/badge?page_id=https://github.com/Mane-Network-Team/Macau-PT-Fetcher)
  Using Selenium and Chrome to Fetch the part-time job information
 
 ## Environment
